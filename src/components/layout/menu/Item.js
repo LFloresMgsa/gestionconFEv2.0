@@ -102,8 +102,8 @@ const Item = React.forwardRef((props, ref) => {
     switch (routeName) {
       case 'home':
       case 'dashboard':
-        case 'inicio':
-          return <HomeOutlinedIcon />;
+      case 'inicio':
+        return <HomeOutlinedIcon />;
 
       case 'sistemas':
         return <ContactPageOutlinedIcon />;
@@ -112,7 +112,11 @@ const Item = React.forwardRef((props, ref) => {
       case 'mantenimientos':
         return <ViewListOutlinedIcon />;
       case 'soporte':
+        return <SettingsOutlinedIcon />;
+      case 'usuario':
         return <ManageAccountsIcon />;
+      case 'archivo':
+        return <ContactPageOutlinedIcon />;
 
       case 'MantPedido':
         return <LibraryAddCheckOutlinedIcon />;

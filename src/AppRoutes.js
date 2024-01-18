@@ -7,7 +7,7 @@ import Categorias from './views/Categorias';
 import Login from './views/Login';
 import Logout from './views/Logout';
 import Soporte from './views/Soporte';
-import Mantenimiento from './views/Mantenimiento';
+
 
 const AppRoutes = (props) => {
   const { accessToken, currentUser } = props;
@@ -41,11 +41,7 @@ const AppRoutes = (props) => {
       />
 
 
-      <Route
-        exact
-        path="/mantenimiento"
-        render={(route) => <Soporte {...props} {...route} />}
-      />
+
       <Route
         path="/inicio"
         render={(route) => <Dashboard {...props} {...route} />}
