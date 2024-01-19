@@ -5,7 +5,8 @@ import Fetch from '../helpers/Fetch';
 export const eventoService = {
   obtenerUsuario,
   obtenerToken,
-  obtenerFilesv2
+  obtenerFilesv2,
+  obtenerUsuariov2
   
 };
 
@@ -28,6 +29,18 @@ function obtenerUsuario(dataJson) {
 //console.log(dataJson);
 
   const url = `/api/gescon/sgm_usuarios/auth`;
+  return Fetch.post(url, params, options).then((res) =>
+    handleResponse(res, false)
+  );
+}
+
+function obtenerUsuariov2(dataJson) {
+  const options = { headers: authHeader(), body: JSON.stringify(dataJson) };
+  const params = {};
+
+//console.log(dataJson);
+
+  const url = `/api/gescon/sgm_usuarios`;
   return Fetch.post(url, params, options).then((res) =>
     handleResponse(res, false)
   );
